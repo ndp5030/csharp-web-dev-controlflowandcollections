@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DictionaryExercises
 {
@@ -6,7 +7,14 @@ namespace DictionaryExercises
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Dictionary<int, string> students = new Dictionary<int, string>();
+            students.Add(1, "Sam");
+            students.Add(2, "Francesca");
+
+            foreach (KeyValuePair<int, string> kvp in students)
+            {
+                Console.WriteLine($"Key: {kvp.Key} Value: {kvp.Value}");
+            }
         }
     }
 }
